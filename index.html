@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="text no-drag">
+    <img src="images/text.png" alt="todo text">
+  </div>
+  <div class="container">
+    
+    <div class="form-row">
+      <label for="taskInput">Task:</label>
+      <input type="text" id="taskInput" placeholder="Enter task">
+    </div>
+
+    <div class="form-row">
+      <label for="prioritySelect">Priority:</label>
+      <select id="prioritySelect">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+    </div>
+
+    <div class="form-row">
+      <label for="deadlineInput">Deadline:</label>
+      <input type="date" id="deadlineInput">
+    </div>
+
+    <div class="form-row">
+      <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <h2>Tasks</h2>
+    <table class="task-list" id="taskList">
+      <tr>
+        <th>Task</th>
+        <th>Priority</th>
+        <th>Deadline</th>
+        <th>Completed</th>
+        <th>Action</th>
+      </tr>
+    </table>
+  </div>
+
+  <div id="notification" class="notification"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
